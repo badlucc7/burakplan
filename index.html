@@ -88,6 +88,15 @@
       <label>Teklif geçerlilik süresi (gün)<input name="validDays" type="number" inputmode="numeric" min="1" max="365"></label>
       <label>Teklif alt notu<textarea name="terms" rows="4"></textarea></label>
     </form>
+    <div class="view-head">
+      <h2>İndirim şablonları</h2>
+      <p class="hint">Teklif ekranında tek dokunuşla seçilir; adı, oranı ve açıklaması otomatik dolar.</p>
+    </div>
+    <ul class="preset-rows" id="presetRows"></ul>
+    <div class="price-tools">
+      <button type="button" class="btn ghost" id="addPreset">Şablon ekle</button>
+      <button type="button" class="btn ghost danger" id="resetPresets">Varsayılan şablonlar</button>
+    </div>
   </main>
 
   <!-- TOTAL BAR -->
@@ -122,14 +131,27 @@
           <label>Koordinatör<input name="coordinator" placeholder="Ad Soyad"></label>
           <label>Geçerlilik (gün)<input name="validDays" type="number" inputmode="numeric" min="1"></label>
         </div>
-        <div class="field">
+        <div class="field block">
+          <label class="switch"><input type="checkbox" id="visitsOn"><span class="sw"></span><span>Tedaviyi ziyaretlere böl (1. / 2. ziyaret)</span></label>
+          <div id="visitBox" class="visit-box" hidden>
+            <ul class="visit-items" id="visitItems"></ul>
+            <div class="visit-notes" id="visitNotes"></div>
+          </div>
+        </div>
+        <div class="field block">
           <span class="label">İndirim</span>
+          <div class="chips mini" id="discPresets"></div>
           <div class="discount">
             <div class="seg" id="discSeg">
               <button type="button" data-disc="pct">%</button>
               <button type="button" data-disc="amt" id="discAmtBtn">£</button>
             </div>
             <input name="discount" type="number" inputmode="decimal" min="0" placeholder="0">
+          </div>
+          <div class="disc-extra" id="discExtra">
+            <label>İndirim adı (teklifte görünür)<input name="discLabel" placeholder="Örn. Event discount"></label>
+            <label>İndirim açıklaması<textarea name="discDetail" rows="2" placeholder="Örn. You save {amount} with our event offer."></textarea></label>
+            <p class="hint small">{amount} indirim tutarı, {percent} yüzde, {valid} geçerlilik tarihi olarak otomatik yazılır.</p>
           </div>
         </div>
         <label>Hastaya not (isteğe bağlı)<textarea name="note" rows="3" placeholder="Örn. Hotel and airport transfers are included."></textarea></label>
