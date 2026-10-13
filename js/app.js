@@ -65,7 +65,7 @@
       if (hadOverride || hadFixedDiscount) LSQ.toast("Para birimi değişti, elle girilen fiyat ve tutarlar sıfırlandı");
     });
 
-    $$("[data-view]").forEach((b) => b.addEventListener("click", () => setView(b.dataset.view)));
+    $$(".tabbar [data-view], .topnav [data-view]").forEach((b) => b.addEventListener("click", () => setView(b.dataset.view)));
     $$(".stepbar [data-step]").forEach((b) => b.addEventListener("click", () => LSQ.setStep(b.dataset.step)));
     LSQ.setStep(LSQ.state.step === "sheet" && LSQ.compute().count ? "sheet" : "items", false);
 

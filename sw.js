@@ -1,5 +1,5 @@
 /* Çevrimdışı çalışma: sayfa ve veri önce ağdan, yazı tipleri ve kütüphaneler önce önbellekten */
-const CACHE = "lsq-v1";
+const CACHE = "lsq-v2";
 const CORE = ["./", "index.html", "css/app.css", "js/icons.js", "data/prices.js", "data/config.js", "js/core.js", "js/quote.js", "js/manage.js", "js/export-pdf.js", "js/export-docx.js", "js/app.js", "manifest.webmanifest"];
 
 self.addEventListener("install", (e) => {

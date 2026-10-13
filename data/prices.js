@@ -26,7 +26,7 @@ window.PRICE_LIST = {
     { id: "emax-crown",        cat: "crowns",   name: "E-Max Crown",                                         gbp: 250, eur: 300 },
     { id: "root-canal",        cat: "general",  name: "Root Canal (Per Root)",                               gbp: 80,  eur: 95 },
     { id: "post-core",         cat: "crowns",   name: "Post / Core Build-Up",                                gbp: 95,  eur: 110 },
-    { id: "nucleoss",          cat: "implants", name: "Premium Titanium Dental Implant",    		     gbp: 350, eur: 400 },
+    { id: "nucleoss",          cat: "implants", name: "Nucleoss Dental Implant (Local) + Abutment",          gbp: 350, eur: 400 },
     { id: "osstem",            cat: "implants", name: "Osstem Dental Implant (South Korea) + Abutment",      gbp: 380, eur: 440 },
     { id: "neodent",           cat: "implants", name: "Neodent Dental Implant + Abutment",                   gbp: 420, eur: 500 },
     { id: "megagen",           cat: "implants", name: "Megagen Dental Implant (South Korea) + Abutment",     gbp: 585, eur: 695 },
